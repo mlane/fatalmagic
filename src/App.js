@@ -1,25 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import { Blocks } from './Block/blocks.component'
+import { getCurrentBlocks } from './common/blocks-util'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const blocks = getCurrentBlocks()
 
-export default App;
+const App = () => (
+  <div id='app'>
+    <h1>FATAL MAGIC</h1>
+    <Blocks blocks={blocks} />
+  </div>
+)
+
+export default App
