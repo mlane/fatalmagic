@@ -11,7 +11,7 @@ const Block = ({ id }) => {
   const [name, setName] = useState()
   const [type, setType] = useState()
 
-  // timer to check if block hasn't been clicked for X seconds (increase durability).
+  // TODO: timer to check to increase durability after X of inactivity.
 
   const onBlockClick = () => {
     setDurability(previousDurability => removeDurability(previousDurability))
